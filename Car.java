@@ -1,10 +1,11 @@
+package Car;
 
 public class Car {
-    private Customer customer;
-    private int id;
+
+    private int carId;
     private String brand;
     private String model;
-    private int productionYear;
+    private String productionYear;
     private double dailyRentalPrice;
     private Boolean isAvailable;
     private double mileage;
@@ -14,47 +15,31 @@ public class Car {
     private String category;
     private String licensePlate;
 
-    public Car(int id, String brand, String model, int productionYear, double dailyRentalPrice, boolean isAvailable, double mileage,
-               String fuelType, String transmissionType, String color, String category, String licensePlate) {
+    public Car(int carId , String brand , String model , String productionYear , double dailyRentalPrice , boolean isAvailable,
+               double mileage , String fuelType , String transmissionType , String color , String category , String licensePlate) {
 
-        this.setId(id);
-        this.setBrand(brand);
-        this.setModel(model);
-        this.setProductionYear(productionYear);
-        this.setDailyRentalPrice(dailyRentalPrice);
-        this.setAvailable(isAvailable);
-        this.setMileage(mileage);
-        this.setFuelType(fuelType);
-        this.setTransmissionType(transmissionType);
-        this.setColor(color);
-        this.setCategoryId(category);
-        this.setLicensePlate(licensePlate);
+        this.carId = carId;
+        this.brand = brand;
+        this.model = model;
+        this.productionYear = productionYear;
+        this.dailyRentalPrice = dailyRentalPrice;
+        this.isAvailable = isAvailable;
+        this.mileage = mileage;
+        this.fuelType = fuelType;
+        this.transmissionType = transmissionType;
+        this.color = color;
+        this.category = category;
+        this.licensePlate = licensePlate;
+
 
     }
 
-    @Override
-    public String toString() {
-        return          " aracın id si " +id+
-                        " Marka= " + brand +
-                        " model= " + model +
-                        " Aracın üretim yılı= " + productionYear +
-                        " Aracın günlük kirası= " + dailyRentalPrice +
-                        " isAvailable= " + isAvailable +
-                        " Aracın şu anki kilometresi= " + mileage +
-                        " Yakıt türü= " + fuelType +
-                        " Şanzıman türü= " + transmissionType +
-                        " Aracın rengi= " + color +
-                        " Aracın kategorisi "+category +
-                        " Aracın plakası= " + licensePlate
-                ;
+    public int getCarId() {
+        return carId;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setCarId(int carId) {
+        this.carId = carId;
     }
 
     public String getBrand() {
@@ -73,11 +58,11 @@ public class Car {
         this.model = model;
     }
 
-    public int getProductionYear() {
+    public String getProductionYear() {
         return productionYear;
     }
 
-    public void setProductionYear(int productionYear) {
+    public void setProductionYear(String productionYear) {
         this.productionYear = productionYear;
     }
 
@@ -133,8 +118,8 @@ public class Car {
         return category;
     }
 
-    public void setCategoryId(String categoryId) {
-        this.category = categoryId;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getLicensePlate() {
@@ -145,4 +130,7 @@ public class Car {
         this.licensePlate = licensePlate;
     }
 
+    public boolean isAvailable() {
+        return isAvailable;
+    }
 }
